@@ -17,4 +17,12 @@ const bookJson = JSON.stringify(book)
 
 
 //this will add my data to json file.
-fs.writeFileSync('1-json.json',bookJson) 
+//fs.writeFileSync('1-json.json',bookJson) 
+
+//to get data from json file 
+// data from redfilesync comes as binary
+const databuffer = fs.readFileSync('1-json.js')
+//console.log(databuffer)
+const stringdata =databuffer.toString()
+const parseddata = JSON.parse(stringdata)
+console.log(parseddata)
