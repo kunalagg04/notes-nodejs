@@ -32,6 +32,9 @@ const yargs = require('yargs')
             demandOption: true,
             type:'string'
 
+        },
+        body:{
+            describe:"note body"
         }
     },
     handler: function(){
